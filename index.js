@@ -15,10 +15,9 @@ import {
   Text,
   TouchableWithoutFeedback,
 } from "react-native";
-import { ViewPropTypes as RNViewPropTypes } from "deprecated-react-native-prop-types";
+import { ViewPropTypes, TextPropTypes } from "deprecated-react-native-prop-types";
 import PropTypes from "prop-types";
 
-const ViewPropTypes = RNViewPropTypes || View.propTypes;
 export const DURATION = {
   LENGTH_SHORT: 500,
   FOREVER: 0,
@@ -146,7 +145,7 @@ const styles = StyleSheet.create({
 Toast.propTypes = {
   style: ViewPropTypes.style,
   position: PropTypes.oneOf(["top", "center", "bottom"]),
-  textStyle: Text.propTypes.style,
+  textStyle: TextPropTypes.style,
   positionValue: PropTypes.number,
   fadeInDuration: PropTypes.number,
   fadeOutDuration: PropTypes.number,
